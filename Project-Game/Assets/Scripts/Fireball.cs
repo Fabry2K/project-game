@@ -4,11 +4,30 @@ public class Fireball : MonoBehaviour
 {
 
     Animator animator;
+    public DetectionZone fireballDetectionZone;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public bool _hasTarget = false;
+
+    public bool HasTarget
+    {
+        get
+        {
+            return _hasTarget;
+        }
+
+        private set
+        {
+            _hasTarget = value;
+            animator.SetBool(AnimationStrings.hasTarget, value);
+        }
+    }
+
+    public void Awake()
+    {
+    }
+
     void Start()
     {
-        // Destroy(gameObject, 1.5f);
         animator = GetComponent<Animator>();
     }
 
@@ -16,8 +35,9 @@ public class Fireball : MonoBehaviour
     void Update()
     {
         FireballCooldown -= Time.deltaTime;
+        HasTarget = fireballDetectionZone.detectedColliders.Count > 0;
     }
-    
+
     public float FireballCooldown
     {
         get
@@ -30,4 +50,5 @@ public class Fireball : MonoBehaviour
             animator.SetFloat(AnimationStrings.fireballCooldown, Mathf.Max(value, 0));
         }
     }
+    
 }
