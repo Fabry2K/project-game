@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 952133561688368614}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,6 +298,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f9d11643-3be9-4383-bf89-f20d90e70c46
     m_ActionName: 'Player/RangedAttack[/Mouse/rightButton,/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 91f74030-0b47-4f27-a751-012f860a7fe1
+    m_ActionName: 'UI/Escape[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
