@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
     public int damage = 10;
     public Vector2 knockback = new Vector2(0, 0);
 
+
+
     Rigidbody2D rb;
 
     private void Awake()
@@ -31,8 +33,12 @@ public class Projectile : MonoBehaviour
             if (gotHit)
             {
                 Debug.Log(collision.name + " hit for " + damage);
-                Destroy(gameObject,0.3f);
+                rb.linearVelocity = new Vector2(0, moveSpeed.y);
             }
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(0, moveSpeed.y);
         }
 
     }

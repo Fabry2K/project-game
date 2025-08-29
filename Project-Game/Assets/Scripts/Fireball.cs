@@ -24,10 +24,6 @@ public class Fireball : MonoBehaviour
 
     public void Awake()
     {
-    }
-
-    void Start()
-    {
         animator = GetComponent<Animator>();
     }
 
