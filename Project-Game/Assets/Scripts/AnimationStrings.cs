@@ -40,4 +40,6 @@ internal class AnimationStrings
 
     internal static string fireballCooldown = "fireballCooldown";
 
+    internal static string attackChosen = "attackChosen";
+
 }
