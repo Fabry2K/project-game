@@ -1,14 +1,13 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
-public class Goblin : MonoBehaviour
-{
 
+public class GoblinNew : MonoBehaviour
+{
     public float walkAcceleration = 3f;
     public float maxSpeed = 3f;
     public float walkStopRate = 0.05f;
     public DetectionZone attackZone1;
-    public DetectionZone attackZone2;
     public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
@@ -47,7 +46,6 @@ public class Goblin : MonoBehaviour
             _walkDirection = value;
         }
     }
-
     public bool _hasTarget = false;
 
     public bool HasTarget
@@ -61,22 +59,6 @@ public class Goblin : MonoBehaviour
         {
             _hasTarget = value;
             animator.SetBool(AnimationStrings.hasTarget, value);
-        }
-    }
-
-    public int _attackChosen = 0;
-
-    public int AttackChosen
-    {
-        get
-        {
-            return _attackChosen;
-        }
-
-        private set
-        {
-            _attackChosen = value;
-            animator.SetInteger(AnimationStrings.attackChosen, value);
         }
     }
 
@@ -111,27 +93,16 @@ public class Goblin : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    
     {
-        int attackZoneDetections = ((attackZone1.detectedColliders.Count > 0) ? 1 : 0) + ((attackZone2.detectedColliders.Count > 0) ? 1 : 0);
-        HasTarget = attackZoneDetections > 0;
-
-        if (attackZoneDetections > 1)
-        {
-            AttackChosen = Random.Range(1, attackZoneDetections);
-        } else if (attackZone1.detectedColliders.Count > 0 && attackZone2.detectedColliders.Count <= 0) {
-            AttackChosen = 1;
-        }else if (attackZone2.detectedColliders.Count > 0 && attackZone1.detectedColliders.Count <= 0)
-        {
-            AttackChosen = 2;
-        }
+        HasTarget = attackZone1.detectedColliders.Count > 0;
 
         if (AttackCooldown > 0)
-            {
-                AttackCooldown -= Time.deltaTime;
-            }
-
+        {
+            AttackCooldown -= Time.deltaTime;
+        }
     }
-
+    
     private void FixedUpdate()
     {
         if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
@@ -181,5 +152,4 @@ public class Goblin : MonoBehaviour
             FlipDirection();
         }
     }
-
 }

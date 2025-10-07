@@ -53,7 +53,8 @@ public class FlyingEye : MonoBehaviour
         nextWaypoint = waypoints[waypointNum];
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         damageable.damageableDeath.AddListener(OnDeath);
     }
 
