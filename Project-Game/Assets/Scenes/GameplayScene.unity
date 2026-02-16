@@ -3824,7 +3824,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.112297, y: 7.6477995, z: -10}
+  m_LocalPosition: {x: 59.08928, y: 7.6477995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4151,7 +4151,6 @@ GameObject:
   m_Component:
   - component: {fileID: 619037583}
   - component: {fileID: 619037582}
-  - component: {fileID: 619037584}
   m_Layer: 0
   m_Name: textbox
   m_TagString: Untagged
@@ -4232,18 +4231,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1745105299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &619037584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619037581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d3a7a6555e9fc4a836d71e5bcca3cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogManager
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,6 +4422,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7ef29fd0e99e14f8399e3634a8dff504, type: 2}
+    - target: {fileID: 4914840641575512380, guid: 645d21ce754074b6ca76b8cd9d52f80f, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7843206662619779478, guid: 645d21ce754074b6ca76b8cd9d52f80f, type: 3}
       propertyPath: damageableHit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5500,11 +5491,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1396329637 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3893484438650327392, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
-  m_PrefabInstance: {fileID: 4803894742943673797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &1396329640 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 3733443234273400159, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
@@ -5515,18 +5501,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8942905234037499566, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
   m_PrefabInstance: {fileID: 4803894742943673797}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1396329642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396329637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d3a7a6555e9fc4a836d71e5bcca3cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogManager
 --- !u!1 &1403858154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,7 +6199,7 @@ Transform:
   m_GameObject: {fileID: 1852512591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.112297, y: 7.6477995, z: -10}
+  m_LocalPosition: {x: 59.08928, y: 7.6477995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6966,10 +6940,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8942905234037499566, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1435788023}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3893484438650327392, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1396329642}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -40,6 +40,10 @@ internal class AnimationStrings
 
     internal static string fireballCooldown = "fireballCooldown";
 
+    internal static string bombCooldown = "bombCooldown";
+
     internal static string attackChosen = "attackChosen";
+
+    internal static string targetCount = "targetCount";
 
 }

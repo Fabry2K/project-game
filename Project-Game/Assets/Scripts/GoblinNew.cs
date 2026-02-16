@@ -8,6 +8,8 @@ public class GoblinNew : MonoBehaviour
     public float maxSpeed = 3f;
     public float walkStopRate = 0.05f;
     public DetectionZone attackZone1;
+    public DetectionZone attackZone2;
+    public DetectionZone attackZone3;
     public DetectionZone cliffDetectionZone;
 
     Rigidbody2D rb;
@@ -46,19 +48,19 @@ public class GoblinNew : MonoBehaviour
             _walkDirection = value;
         }
     }
-    public bool _hasTarget = false;
+    public int _targetCount = 0;
 
-    public bool HasTarget
+    public int TargetCount
     {
         get
         {
-            return _hasTarget;
+            return _targetCount;
         }
 
         private set
         {
-            _hasTarget = value;
-            animator.SetBool(AnimationStrings.hasTarget, value);
+            _targetCount = value;
+            animator.SetInteger(AnimationStrings.targetCount, value);
         }
     }
 
@@ -93,9 +95,21 @@ public class GoblinNew : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    
     {
-        HasTarget = attackZone1.detectedColliders.Count > 0;
+        TargetCount = 0;
+        if (attackZone1.detectedColliders.Count > 0)
+        {
+            TargetCount = 1;
+        }
+
+        if(attackZone2.detectedColliders.Count > 0){
+            TargetCount = 2;
+        }
+
+        if(attackZone3.detectedColliders.Count > 0){
+            TargetCount = 3;
+        }
+
 
         if (AttackCooldown > 0)
         {
