@@ -7773,7 +7773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1682ea69fc4434667870a0c0a1157e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  optionsMenu: {fileID: 1363661484}
+  optionsMenu: {fileID: 0}
   hudGroup: {fileID: 1536126350}
 --- !u!4 &1023511424
 Transform:
@@ -10382,6 +10382,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1022106365371895126, guid: 93695a4a63aab1d419783807b57478aa, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 02bfee0f-823d-4d8d-8d78-eebf080b1aef
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022106365371895126, guid: 93695a4a63aab1d419783807b57478aa, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022106365371895126, guid: 93695a4a63aab1d419783807b57478aa, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1983765062975156333, guid: 93695a4a63aab1d419783807b57478aa, type: 3}
       propertyPath: m_GravityScale
       value: 0
@@ -10576,6 +10588,14 @@ PrefabInstance:
     - target: {fileID: 5813132518526640010, guid: 84283cb063b5167458a9ea2c403ccffe, type: 3}
       propertyPath: m_Name
       value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822103862168268889, guid: 84283cb063b5167458a9ea2c403ccffe, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 11313cc0-724c-488a-9424-5e029b4a4204
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822103862168268889, guid: 84283cb063b5167458a9ea2c403ccffe, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10866,10 +10886,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8942905234037499566, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1536126351}
+      addedObject: {fileID: 1363661485}
     - targetCorrespondingSourceObject: {fileID: 8942905234037499566, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1363661485}
+      addedObject: {fileID: 1536126351}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132b82d2106456049a1ec6869a7a74c8, type: 3}
 --- !u!1660057539 &9223372036854775807
